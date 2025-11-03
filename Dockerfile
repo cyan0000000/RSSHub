@@ -171,6 +171,9 @@ RUN \
 
 COPY --from=docker-minifier /app /app
 
+COPY ./lib/routes/minkabu/new_arrivals.js /app/lib/routes/minkabu/new_arrivals.js
+COPY ./lib/router.js /app/lib/router.js
+
 EXPOSE 1200
 ENTRYPOINT ["dumb-init", "--"]
 
